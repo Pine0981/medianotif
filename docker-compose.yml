@@ -1,0 +1,24 @@
+services:
+  medianotify:
+    image: medianotify:latest        # or use build: . to build locally
+    build: .
+    container_name: medianotify
+    restart: unless-stopped
+    ports:
+      - "${PORT:-5055}:5055"
+    environment:
+      - DISCORD_WEBHOOK_URL=${DISCORD_WEBHOOK_URL}
+      - AUTH_TOKEN=${AUTH_TOKEN:-}
+      - PORT=5055
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:5055/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    # Attach to your existing media stack network if you have one:
+    # networks:
+    #   - media
+    # networks:
+    #   media:
+    #     external: true

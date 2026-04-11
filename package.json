@@ -1,0 +1,15 @@
+{
+  "name": "medianotify",
+  "version": "1.0.0",
+  "description": "Lightweight Discord notification microservice for Sonarr, Radarr, Overseerr, and Deluge",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": ["discord", "sonarr", "radarr", "overseerr", "deluge", "webhook", "notifications", "docker"],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
