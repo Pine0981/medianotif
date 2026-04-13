@@ -1,6 +1,6 @@
 # 🎬 medianotify
 
-> Lightweight Discord notification microservice for your self-hosted media stack.
+> Lightweight Discord notification microservice for your self-hosted media stack Made with Claude AI
 
 Receive rich Discord notifications for **Sonarr**, **Radarr**, **Overseerr**, and **Deluge** — all from a single tiny container (~50MB).
 
